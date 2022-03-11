@@ -12,7 +12,7 @@ pipeline {
         stage('Create docker image') {
             steps {
                 echo "========== start building image =========="
-                sh 'docker run hello-world'
+                sh 'node --version'
             }
         }
     }
