@@ -7,9 +7,9 @@ pipeline {
         label 'master'
     }
     options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10')
-        // timestamps()
-    }
+            timestamps()
+            buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
+        }
     stages {
         stage('First step') {
             steps {
