@@ -4,7 +4,7 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
-        label 'master'
+        label ''
     }
     options {
             timestamps()
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo "========== start building image =========="
                 dir ('Docker/Toolbox') {
-                    sh 'docker build . '
+                    sh 'docker build .'
                 }
             }
         }
